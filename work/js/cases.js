@@ -186,6 +186,19 @@ export const CASES = [
         + 'and hard per-window drawdown constraints. Volatility-regime classification '
         + '(high/low/rising/falling) conditions the positioning rather than being predicted for '
         + 'its own sake.'],
+      ['The tools', 'Three systems carry the practice, all built in-house. An <em>options '
+        + 'desk</em> \u2014 an agent-operated research and execution environment with scheduled '
+        + 'runs, research studies, written retrospectives, and a durable-learnings file so a '
+        + 'conclusion reached once is not rediscovered next quarter. A <em>multi-account '
+        + 'manager</em>: an interactive command-line tool over the broker API for reviewing '
+        + 'accounts, managing positions and rebalancing to model portfolios, built for running '
+        + 'several accounts rather than one. And a <em>portfolio optimizer</em> doing walk-forward '
+        + 'optimization across multiple solvers with scenario analysis on top.'],
+      ['Where the agent model came from', 'The multi-agent operating model published as '
+        + '<a href="https://github.com/greentheo/the-firm">The Firm</a> was built here first '
+        + '\u2014 roles, a labelled board, and the rules about relayed authority and verifying '
+        + 'one level down. A research desk where a wrong answer costs real money is an unusually '
+        + 'good place to find out which agent disciplines actually matter.'],
       ['Portfolio construction', 'Mean-variance optimization and an efficient-frontier core, '
         + 'blended with macro and geopolitical scenario forecasts.'],
       ['The news-sentiment layer', 'Ingests unstructured financial news, extracts entity '
