@@ -238,14 +238,17 @@
         </g>
       </svg>
       <div class="body">
-        <div class="title"><h3>Unfold to Sheets</h3><span class="pill wip">in progress</span></div>
+        <div class="title"><h3>Unfold to Sheets</h3><span class="pill live">live</span></div>
         <p class="what">Take a 3D model, cut it into pieces that flatten, nest those onto
           sheet stock, and mark the seams so it can be put back together.</p>
         <p class="why"><b>It sweeps the scale.</b> The interesting output is not one layout
           but the curve of waste against size &mdash; how big you should build it.</p>
         <div class="tags"><span class="tag">JavaScript</span><span class="tag">geometry</span>
           <span class="tag">nesting</span></div>
-        <div class="cta"><a href="https://github.com/greentheo">Not published yet</a></div>
+        <div class="cta">
+          <a class="play" href="https://greentheo.github.io/unfold-to-sheets/">Open it</a>
+          <a href="https://github.com/greentheo/unfold-to-sheets">Source</a>
+        </div>
       </div>
     </article>
 
@@ -266,7 +269,7 @@
           <circle cx="38" cy="29" r="1.8"/><circle cx="122" cy="29" r="1.8"/></g>
       </svg>
       <div class="body">
-        <div class="title"><h3>Lofting</h3><span class="pill wip">in progress</span></div>
+        <div class="title"><h3>Lofting</h3><span class="pill live">live</span></div>
         <p class="what">Turn a scanned or photographed boat lines plan into a table of
           offsets you can scale to any size.</p>
         <p class="why"><b>Calibration is the whole problem.</b> A photo of a plan is
@@ -274,7 +277,71 @@
           undone first.</p>
         <div class="tags"><span class="tag">JavaScript</span><span class="tag">boat building</span>
           <span class="tag">calibration</span></div>
-        <div class="cta"><a href="https://github.com/greentheo">Not published yet</a></div>
+        <div class="cta">
+          <a class="play" href="https://greentheo.github.io/lofting/">Open it</a>
+          <a href="https://github.com/greentheo/lofting">Source</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <svg class="thumb" viewBox="0 0 160 90" role="img" aria-label="A part being measured against a spec">
+        <rect width="160" height="90" fill="#0f1014"/>
+        <path d="M44 30 h52 a8 8 0 0 1 8 8 v22 a8 8 0 0 1 -8 8 h-52 a8 8 0 0 1 -8 -8 v-22 a8 8 0 0 1 8 -8Z"
+          fill="#171d26" stroke="#7aa2f7" stroke-width="1.3"/>
+        <circle cx="54" cy="49" r="5" fill="#0f1014" stroke="#7aa2f7" stroke-width="1.1"/>
+        <circle cx="86" cy="49" r="5" fill="#0f1014" stroke="#7aa2f7" stroke-width="1.1"/>
+        <g stroke="#5fd3a6" stroke-width="1" stroke-linecap="round">
+          <path d="M36 22 H104"/><path d="M36 19 V25"/><path d="M104 19 V25"/>
+          <path d="M116 30 V68"/><path d="M113 30 H119"/><path d="M113 68 H119"/>
+        </g>
+        <g fill="#5fd3a6" font-family="ui-monospace,monospace" font-size="7">
+          <text x="62" y="16">68.0 ±0.2</text><text x="124" y="52">38</text>
+        </g>
+        <g stroke="#e0a152" stroke-width="1" stroke-dasharray="2 2">
+          <path d="M54 49 V78"/><path d="M86 49 V78"/>
+        </g>
+        <text x="56" y="86" fill="#e0a152" font-family="ui-monospace,monospace" font-size="7">32.0 c-c</text>
+      </svg>
+      <div class="body">
+        <div class="title"><h3>Caliper</h3><span class="pill wip">in progress</span></div>
+        <p class="what">Spec-driven generation of manufacturable 3D parts. Describe the part,
+          get an executable spec, generate the mesh, measure it, iterate until it passes.</p>
+        <p class="why"><b>Test-driven development for physical parts.</b> Wall thickness, hole
+          inventory, mass, interference and watertightness are measured exactly and graded
+          against the spec. The numbers are ground truth; the render is only a sanity check.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">CadQuery</span>
+          <span class="tag">LLM</span><span class="tag">CAD</span></div>
+        <div class="cta"><a href="https://github.com/greentheo">Runs locally</a></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <svg class="thumb" viewBox="0 0 160 90" role="img" aria-label="Irregular parts packed onto a steel sheet">
+        <rect width="160" height="90" fill="#13100f"/>
+        <rect x="10" y="10" width="140" height="70" fill="#1b1613" stroke="#3a2d26"/>
+        <g fill="#241c17" stroke="#e0a152" stroke-width="1.1">
+          <path d="M18 20 q16-6 28 2 t10 20 q-14 10 -28 4 t-10 -26Z"/>
+          <path d="M62 18 h30 l8 16 -12 14 -26 -2 -6 -16Z"/>
+          <path d="M106 20 q20-4 30 8 t-6 24 q-18 4 -26 -8 t2 -24Z"/>
+          <path d="M18 56 h26 l6 18 h-32Z"/>
+          <path d="M58 56 q18-4 26 6 t-4 12 h-26Z"/>
+        </g>
+        <g fill="none" stroke="#e2563f" stroke-width=".8" stroke-dasharray="2 2">
+          <path d="M14 14 h132 v62 h-132Z"/>
+        </g>
+        <circle cx="94" cy="66" r="2.4" fill="#e2563f"/>
+        <path d="M94 66 l18-10" stroke="#e2563f" stroke-width=".9"/>
+      </svg>
+      <div class="body">
+        <div class="title"><h3>Plasma Nesting</h3><span class="pill src">private</span></div>
+        <p class="what">2D nesting for CNC plasma cutting. Parses the cut shapes back out of
+          G-code, packs them onto a sheet to waste less steel, and emits new G-code panels.</p>
+        <p class="why"><b>It reads the toolpaths you already have.</b> Nothing to redraw and
+          nothing to re-export — G-code in, packed G-code out.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">bin packing</span>
+          <span class="tag">G-code</span><span class="tag">CNC</span></div>
+        <div class="cta"><a href="https://github.com/greentheo">Private repo</a></div>
       </div>
     </article>
 
