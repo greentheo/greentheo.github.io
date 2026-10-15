@@ -42,8 +42,8 @@ if (!c) {
     <h1>${c.title}</h1>
     <p class="meta">${c.role} &middot; ${c.period}</p>
     <svg class="hero" viewBox="0 0 160 90" role="img" aria-label="${c.title}">${c.svg}</svg>
-    <div class="metrics">${c.metrics.map(([n, l]) =>
-      `<div class="metric"><b>${n}</b><span>${l}</span></div>`).join('')}</div>
+    <div class="metrics">${c.metrics.map(([n, l, k]) =>
+      `<div class="metric"><b>${n}</b><span>${l}</span>${k ? `<em class="claim ${k}">${k}</em>` : ''}</div>`).join('')}</div>
     ${c.detail.map(([h, p]) => `<section><h2>${h}</h2><p class="body">${p}</p></section>`).join('')}
     <div class="tags" style="padding:6px 0 20px">${c.tags.map((t) =>
       `<span class="tag">${t}</span>`).join('')}</div>

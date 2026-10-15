@@ -2,7 +2,15 @@
 // this, and /work/case.html renders the full study from the same record. One
 // source of truth, so a number can never disagree with itself across pages.
 //
-// Everything here comes off the resume. Nothing is inferred or rounded up.
+// Everything here comes off the resume and the career inventory. Nothing is
+// inferred or rounded up.
+//
+// Every figure carries a claim type, because they are not the same kind of
+// claim and a page that blurs them is a page you cannot trust twice:
+//
+//   realized   — it happened and the money or the time moved
+//   identified — found and quantified; capture was someone else's to execute
+//   validated  — measured against a held-out or human-labeled set
 
 export const CASES = [
   {
@@ -17,9 +25,8 @@ export const CASES = [
     whyMore: 'A decline shows up everywhere at once. The work was causal inference across sell-in, '
       + 'sell-out and direct-to-consumer channels to find which movements actually caused the others.',
     metrics: [
-      ['~$200M', 'net identified opportunity'],
-      ['3 channels', 'sell-in, sell-out, DTC'],
-      ['$1M + 8pts', 'from RL pricing optimization'],
+      ['~$200M', 'net opportunity', 'identified'],
+      ['3 channels', 'sell-in, sell-out, DTC', ''],
     ],
     detail: [
       ['The diagnosis', 'Volume and revenue were falling across Brazil and the usual dashboards '
@@ -34,8 +41,6 @@ export const CASES = [
         + 'team: an agent that works ad hoc business questions the way an analyst would. It compiles '
         + 'evidence, archives its conclusions, and synthesizes follow-on directions and testable '
         + 'interventions rather than returning a single answer and stopping.'],
-      ['Alongside', 'A pricing optimization system combining reinforcement learning and causal '
-        + 'inference, adding $1M in revenue and 8 points to the bottom line.'],
     ],
     tags: ['causal inference', 'agentic LLM', 'reinforcement learning', 'CPG'],
     svg: `<rect width="160" height="90" fill="#0f1014"/>
@@ -60,9 +65,9 @@ export const CASES = [
     whyMore: 'ERP, CRM, EDI, retailer portals and spreadsheets do not agree on what a product is. '
       + 'The hard part was not the model, it was making the inputs mean the same thing week to week.',
     metrics: [
-      ['30h → 30min', 'design partner’s weekly reporting cycle'],
-      ['2,400+ SKUs', 'across 4+ source files, zero manual merges'],
-      ['0 → 1', 'launched to paying customers on recurring contracts'],
+      ['30h → 30min', 'design partner’s weekly reporting cycle', 'realized'],
+      ['2,400+ SKUs', 'across 4+ conflicting source files, zero manual merges', 'realized'],
+      ['0 → 1', 'launched to paying customers on recurring contracts', 'realized'],
     ],
     detail: [
       ['The problem', 'A consumer brand’s truth is split across an ERP, a CRM, EDI feeds, several '
@@ -75,6 +80,10 @@ export const CASES = [
       ['Inferring structure', 'A hybrid LLM/expert system at ingest infers structure from previously '
         + 'unseen datasets and generates the data dictionary automatically — so a new source is '
         + 'onboarded rather than integrated.'],
+      ['Uncertainty routing', 'Low-confidence records go to human review rather than being '
+        + 'asserted — the difference between a system you can run unattended and one that '
+        + 'quietly invents a number. Inputs throughout are structured files (CSV, Excel, EDI); '
+        + 'there is no document scanning anywhere in this.'],
       ['Making it actionable', 'A signal-detection and ranking layer filters noise into a prioritized '
         + 'action queue covering inventory risk, margin and sales-opportunity exceptions. Every item '
         + 'carries a generated rationale and full source-record provenance, so each recommendation is '
@@ -114,9 +123,9 @@ export const CASES = [
     whyMore: 'Health advice is the case where "it seems good" is not a standard. I built the rubric, '
       + 'the harness and the regression suite before trusting any of it.',
     metrics: [
-      ['+10%', 'above OpenAI’s baseline on Certified Nutritionist exam content'],
-      ['80–90%', 'reduction in nutrition workflow time'],
-      ['6 engineers', 'hired and led'],
+      ['+10%', 'above OpenAI’s baseline, Certified Nutritionist exam content', 'validated'],
+      ['80–90%', 'reduction in nutrition workflow time', 'realized'],
+      ['6 engineers', 'hired and led', ''],
     ],
     detail: [
       ['The system', 'An LLM physician and dietitian reasoning over unified personal health data. '
@@ -158,9 +167,9 @@ export const CASES = [
     whyMore: 'So I founded a cross-organizational team that lent science and senior engineering '
       + 'capacity to them — which is a different problem from any single model.',
     metrics: [
-      ['+93% CTR', 'gift-giving campaigns, nine-figure seasonal impact'],
-      ['+25%', 'post-cart conversion, ten-figure impact'],
-      ['~100', 'interview panels served'],
+      ['+93% CTR', 'gift-giving campaigns, nine-figure seasonal impact', 'realized'],
+      ['+25%', 'post-cart conversion, ten-figure impact', 'realized'],
+      ['~100', 'interview panels served', ''],
     ],
     detail: [
       ['Fashion', 'Led R&D for fashion personalization using active learning, reinforcement learning '
@@ -201,9 +210,9 @@ export const CASES = [
     whyMore: 'Prospective well-return data let the optimizer prioritize the most profitable service '
       + 'areas, not just the shortest path between the ones already on the list.',
     metrics: [
-      ['$90M+', 'in transportation cost savings'],
-      ['40,000+', 'square miles of service area'],
-      ['100s', 'of vehicles dispatched'],
+      ['$90M+', 'in transportation cost savings', 'realized'],
+      ['40,000+', 'square miles of service area', ''],
+      ['100s', 'of vehicles dispatched', ''],
     ],
     detail: [
       ['The scale', 'Dispatch across more than 40,000 square miles and hundreds of vehicles — a '
@@ -235,21 +244,21 @@ export const CASES = [
     client: 'Mercer Advisors',
     role: 'Principal Applied AI Architect — via A.Team',
     period: '2024',
-    title: 'Reading 4,000 firms’ filings and ranking what matters',
+    title: 'Ranking 4,000 firms by how likely they are to sell',
     summary: 'Acquisition intelligence over 4,000+ advisory firms: knowledge-graph extraction from '
       + 'regulatory filings, sell-probability forecasting, and a GPT layer filling structured '
       + 'assessments — combined through calibrated ranking.',
-    why: 'An LLM that answers 21 questions about 4,000 firms needs to be checkable.',
+    why: 'An LLM answering 21 questions about 4,000 firms has to be checkable.',
     whyMore: 'Calibrated ranking against a human-labeled gold set is what turns a pile of generated '
       + 'answers into a list someone will act on.',
     metrics: [
-      ['~2% → ~8%', 'candidate hit rate'],
-      ['4,000+', 'firms assessed'],
-      ['21 fields', 'structured per entity'],
+      ['~2% → ~8%', 'candidate hit rate vs a human-labeled gold set', 'validated'],
+      ['4,000+', 'firms assessed', ''],
+      ['21 fields', 'structured per entity', ''],
     ],
     detail: [
-      ['The task', 'Find which of 4,000+ advisory firms are worth approaching — a question buried in '
-        + 'regulatory filings and public documents that nobody has time to read.'],
+      ['The task', 'Find which of 4,000+ advisory firms are worth approaching — a question '
+        + 'answerable from regulatory filings and public sources, at a volume nobody has time for.'],
       ['The system', 'Knowledge-graph feature extraction from regulatory filings and public sources, '
         + 'sell-probability forecasting, and GPT deployed as a question-answering layer populating a '
         + '21-field assessment per entity.'],

@@ -72,3 +72,16 @@ header h1{margin-bottom:8px}
   background:var(--card);border:1px solid var(--line);color:var(--dim);
   padding:8px 15px;border-radius:999px;font-size:13.5px;transition:.15s}
 .mini:hover{color:var(--ink);border-color:#3a434f}
+
+/* ---------- claim types ---------- */
+/* A realized number and an identified one are different claims. Saying which
+   is which costs a word and buys the reader a reason to believe the rest. */
+.claim{font:9px ui-monospace,SFMono-Regular,monospace;font-style:normal;
+  letter-spacing:.1em;text-transform:uppercase;padding:1px 6px;border-radius:4px;
+  border:1px solid;align-self:flex-start;margin-top:3px}
+.claim.realized{color:var(--accent);border-color:#2a5f4c;background:#102a22}
+.claim.identified{color:var(--warn);border-color:#5a452a;background:#2a2016}
+.claim.validated{color:var(--accent-2);border-color:#2f4068;background:#141c2c}
+.legend{margin:-6px 0 20px;color:var(--faint);font-size:13px;line-height:2;max-width:78ch}
+.legend .claim{margin:0 2px 0 6px}
+.case .metrics .claim{font-size:9px}

@@ -33,6 +33,12 @@
 
 <section>
   <div class="shead"><h2>Selected work</h2><p>Six engagements, in detail</p></div>
+  <p class="legend">Every figure below is tagged, because they are not the same kind of claim:
+    <em class="claim realized">realized</em> it happened and the money or the time moved &middot;
+    <em class="claim identified">identified</em> found and quantified, capture was someone
+      else&rsquo;s to execute &middot;
+    <em class="claim validated">validated</em> measured against a held-out or human-labeled set.
+    A page that blurs those is a page you cannot trust twice.</p>
   <div class="grid" id="cases"></div>
 </section>
 
@@ -46,9 +52,10 @@
         <p class="org">A.Team</p>
         <p>Principal-level engagements for Fortune 100 and enterprise clients across CPG, retail and
           finance; fractional and concurrent by design, directing teams of up to three.
-          <b>AB InBev/Ambev</b> (2025), <b>Mercer Advisors</b> (2024), and <b>Mudflap</b>
-          (2023&ndash;2024) — first hire on the data science function, Snowflake from zero,
-          and reinforcement-learning dynamic pricing across 100,000+ drivers.</p>
+          <b>AB InBev/Ambev</b> (2025), <b>Mercer Advisors</b> (2024), and <b>Mudflap</b> — first hire
+          on the data science function, Snowflake stood up from zero with adoption driven across
+          non-technical teams, Amplitude experimentation integrated, and reinforcement-learning
+          dynamic pricing across 100,000+ drivers.</p>
       </div>
     </li>
     <li>
@@ -190,8 +197,8 @@ host.innerHTML = CASES.map((c) => `
       <div class="title"><h3>${c.client}</h3><span class="pill src">${c.period}</span></div>
       <p class="what">${c.summary}</p>
       <p class="why"><b>${c.why}</b> ${c.whyMore}</p>
-      <div class="metrics">${c.metrics.map(([n, l]) =>
-        `<div class="metric"><b>${n}</b><span>${l}</span></div>`).join('')}</div>
+      <div class="metrics">${c.metrics.map(([n, l, k]) =>
+        `<div class="metric"><b>${n}</b><span>${l}</span>${k ? `<em class="claim ${k}">${k}</em>` : ''}</div>`).join('')}</div>
       <div class="tags">${c.tags.map((t) => `<span class="tag">${t}</span>`).join('')}</div>
       <div class="cta"><a class="play" href="case.html?id=${c.id}">Read it</a></div>
     </div>
