@@ -311,7 +311,7 @@
         <text x="56" y="86" fill="#e0a152" font-family="ui-monospace,monospace" font-size="7">32.0 c-c</text>
       </svg>
       <div class="body">
-        <div class="title"><h3>Caliper</h3><span class="pill wip">in progress</span></div>
+        <div class="title"><h3>Caliper</h3><span class="pill src">source</span></div>
         <p class="what">Spec-driven generation of manufacturable 3D parts. Describe the part,
           get an executable spec, generate the mesh, measure it, iterate until it passes.</p>
         <p class="why"><b>Test-driven development for physical parts.</b> Wall thickness, hole
@@ -319,7 +319,8 @@
           against the spec. The numbers are ground truth; the render is only a sanity check.</p>
         <div class="tags"><span class="tag">Python</span><span class="tag">CadQuery</span>
           <span class="tag">LLM</span><span class="tag">CAD</span></div>
-        <div class="cta"><a href="https://github.com/greentheo">Runs locally</a></div>
+        <div class="cta"><a href="https://github.com/greentheo/caliper">Source</a>
+          <a href="https://github.com/greentheo/caliper#-run-it-the-two-commands-that-matter">Run it locally</a></div>
       </div>
     </article>
 
@@ -341,14 +342,46 @@
         <path d="M94 66 l18-10" stroke="#e2563f" stroke-width=".9"/>
       </svg>
       <div class="body">
-        <div class="title"><h3>Plasma Nesting</h3><span class="pill src">private</span></div>
+        <div class="title"><h3>Plasma Nesting</h3><span class="pill src">source</span></div>
         <p class="what">2D nesting for CNC plasma cutting. Parses the cut shapes back out of
           G-code, packs them onto a sheet to waste less steel, and emits new G-code panels.</p>
         <p class="why"><b>It reads the toolpaths you already have.</b> Nothing to redraw and
           nothing to re-export — G-code in, packed G-code out.</p>
         <div class="tags"><span class="tag">Python</span><span class="tag">bin packing</span>
           <span class="tag">G-code</span><span class="tag">CNC</span></div>
-        <div class="cta"><a href="https://github.com/greentheo">Private repo</a></div>
+        <div class="cta"><a href="https://github.com/greentheo/cnc-plasma-nesting">Source</a></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <svg class="thumb" viewBox="0 0 160 90" role="img" aria-label="A code map with agents attached">
+        <rect width="160" height="90" fill="#0f1014"/>
+        <g fill="none" stroke="#2f3f52" stroke-width="1">
+          <path d="M80 20 V34"/><path d="M80 34 H44 V48"/><path d="M80 34 H116 V48"/>
+          <path d="M44 48 H26 V62"/><path d="M44 48 H62 V62"/>
+          <path d="M116 48 H98 V62"/><path d="M116 48 H134 V62"/>
+        </g>
+        <rect x="66" y="12" width="28" height="12" rx="3" fill="#152a24" stroke="#5fd3a6" stroke-width="1.2"/>
+        <g fill="#171d26" stroke="#7aa2f7" stroke-width="1">
+          <rect x="32" y="48" width="24" height="10" rx="2"/><rect x="104" y="48" width="24" height="10" rx="2"/>
+        </g>
+        <g fill="#171d26" stroke="#3a4250" stroke-width=".9">
+          <rect x="16" y="62" width="20" height="9" rx="2"/><rect x="52" y="62" width="20" height="9" rx="2"/>
+          <rect x="88" y="62" width="20" height="9" rx="2"/><rect x="124" y="62" width="20" height="9" rx="2"/>
+        </g>
+        <g fill="#e0a152"><circle cx="26" cy="79" r="2"/><circle cx="62" cy="79" r="2"/>
+          <circle cx="98" cy="79" r="2"/><circle cx="134" cy="79" r="2"/></g>
+      </svg>
+      <div class="body">
+        <div class="title"><h3>Cartograph</h3><span class="pill src">source</span></div>
+        <p class="what">A visual map of any repository, built from the source rather than from a
+          model&rsquo;s impression of it, with coding agents attached at every level.</p>
+        <p class="why"><b>A map that can be wrong in a way you notice.</b> The crawler extracts what
+          the code actually says &mdash; modules, imports, resolved call edges &mdash; and every
+          element carries a <code>file:line</code> you can go and check.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">AST</span>
+          <span class="tag">agents</span><span class="tag">code visualization</span></div>
+        <div class="cta"><a href="https://github.com/greentheo/cartograph">Source</a></div>
       </div>
     </article>
 
