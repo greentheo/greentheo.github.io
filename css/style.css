@@ -1,0 +1,78 @@
+/* A portfolio of things that run in a browser, so the page itself had better
+   load instantly and work everywhere. No fonts to fetch, no framework, no
+   images — the thumbnails are inline SVG, which is also the house style of
+   half the projects on this page. */
+:root{
+  --bg:#0c0d0f; --card:#14161a; --card-2:#191c21; --line:#262b33;
+  --ink:#e9ecf1; --dim:#929bab; --faint:#616b7c;
+  --accent:#5fd3a6; --accent-2:#7aa2f7; --warn:#e0a152;
+  --radius:12px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font:16px/1.6 ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  -webkit-font-smoothing:antialiased;
+  background-image:radial-gradient(ellipse 90% 50% at 50% -8%, #17201f 0%, var(--bg) 70%)}
+a{color:inherit}
+
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+
+/* ---------- header ---------- */
+header{padding:90px 0 54px}
+h1{margin:0 0 14px;font-size:clamp(34px,5.5vw,56px);line-height:1.08;letter-spacing:-.02em}
+h1 span{color:var(--accent)}
+.lede{margin:0;max-width:62ch;font-size:clamp(16px,2vw,19px);color:var(--dim)}
+.lede b{color:var(--ink);font-weight:600}
+.links{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
+.links a{display:inline-flex;align-items:center;gap:7px;text-decoration:none;
+  background:var(--card);border:1px solid var(--line);color:var(--dim);
+  padding:8px 15px;border-radius:999px;font-size:14px;transition:.15s}
+.links a:hover{color:var(--ink);border-color:#3a434f;transform:translateY(-1px)}
+
+/* ---------- sections ---------- */
+section{padding:30px 0 10px}
+.shead{display:flex;align-items:baseline;gap:14px;margin:0 0 20px;flex-wrap:wrap}
+.shead h2{margin:0;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
+.shead p{margin:0;color:var(--faint);font-size:14px}
+
+/* ---------- cards ---------- */
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fill,minmax(310px,1fr))}
+.card{display:flex;flex-direction:column;background:var(--card);
+  border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
+  transition:.18s}
+.card:hover{border-color:#3a434f;transform:translateY(-2px);
+  box-shadow:0 14px 34px rgba(0,0,0,.4)}
+.thumb{display:block;width:100%;aspect-ratio:16/9;background:var(--card-2);
+  border-bottom:1px solid var(--line)}
+.body{padding:16px 18px 18px;display:flex;flex-direction:column;flex:1;gap:9px}
+.title{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.title h3{margin:0;font-size:18px;letter-spacing:-.01em}
+.what{margin:0;color:var(--dim);font-size:14.5px}
+.why{margin:0;color:var(--faint);font-size:13.5px;border-left:2px solid var(--line);
+  padding-left:11px}
+.why b{color:var(--accent);font-weight:600}
+.tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:auto;padding-top:4px}
+.tag{font:11px ui-monospace,SFMono-Regular,monospace;color:var(--faint);
+  background:var(--card-2);border:1px solid var(--line);padding:2px 8px;border-radius:5px}
+.cta{display:flex;gap:9px;flex-wrap:wrap;margin-top:10px}
+.cta a{text-decoration:none;font-size:13.5px;padding:7px 14px;border-radius:7px;
+  border:1px solid var(--line);color:var(--dim);transition:.15s}
+.cta a:hover{color:var(--ink);border-color:#3a434f}
+.cta a.play{background:var(--accent);border-color:var(--accent);color:#06241b;font-weight:600}
+.cta a.play:hover{filter:brightness(1.07);color:#06241b}
+
+.pill{font:10px ui-monospace,monospace;letter-spacing:.1em;text-transform:uppercase;
+  padding:3px 8px;border-radius:999px;border:1px solid}
+.pill.live{color:var(--accent);border-color:#2a5f4c;background:#102a22}
+.pill.wip{color:var(--warn);border-color:#5a452a;background:#2a2016}
+.pill.src{color:var(--accent-2);border-color:#2f4068;background:#141c2c}
+
+footer{padding:70px 0 60px;color:var(--faint);font-size:13.5px;
+  border-top:1px solid var(--line);margin-top:50px}
+footer a{color:var(--dim)}
+
+@media (max-width:560px){
+  header{padding:54px 0 34px}
+  .grid{grid-template-columns:1fr}
+}
