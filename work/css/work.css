@@ -1,0 +1,74 @@
+/* Additions for the resume pages. The card language, pills and grid all come
+   from the project page's stylesheet — the two pages should read as one site,
+   because a portfolio that looks like two sites is two half portfolios. */
+
+.back{display:inline-block;text-decoration:none;color:var(--faint);font-size:13.5px;
+  margin-bottom:26px;transition:.15s}
+.back:hover{color:var(--accent)}
+header .role{margin:0 0 18px;color:var(--accent);font-size:15px;letter-spacing:.01em}
+header h1{margin-bottom:8px}
+
+.thumblink{display:block;text-decoration:none}
+
+/* ---------- metrics ---------- */
+.metrics{display:flex;gap:16px;flex-wrap:wrap;padding:10px 0 2px;
+  border-top:1px solid var(--line);margin-top:4px}
+.metric{display:flex;flex-direction:column;gap:1px;min-width:0}
+.metric b{font:600 15px ui-monospace,SFMono-Regular,monospace;color:var(--accent);
+  letter-spacing:-.02em}
+.metric span{font-size:11px;color:var(--faint);line-height:1.35}
+
+/* ---------- timeline ---------- */
+.timeline{list-style:none;margin:0;padding:0;position:relative}
+.timeline::before{content:"";position:absolute;left:7px;top:8px;bottom:8px;width:1px;
+  background:var(--line)}
+.timeline li{display:flex;gap:22px;padding:0 0 26px 30px;position:relative;flex-wrap:wrap}
+.timeline li::before{content:"";position:absolute;left:3px;top:7px;width:9px;height:9px;
+  border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
+.timeline .when{flex:0 0 118px;font:12px ui-monospace,SFMono-Regular,monospace;
+  color:var(--faint);padding-top:2px}
+.timeline .what{flex:1 1 360px;min-width:0}
+.timeline h3{margin:0 0 2px;font-size:17px;letter-spacing:-.01em}
+.timeline .org{margin:0 0 7px;color:var(--accent);font-size:13.5px}
+.timeline p{margin:0;color:var(--dim);font-size:14.5px}
+.timeline p b{color:var(--ink);font-weight:600}
+
+/* ---------- skills / education ---------- */
+.skills{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(290px,1fr))}
+.skill{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:16px 18px}
+.skill h4{margin:0 0 7px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--accent)}
+.skill p{margin:0;color:var(--dim);font-size:14px}
+.skill a{color:var(--accent-2)}
+
+/* ---------- a single case study ---------- */
+.case{max-width:780px}
+.case .kicker{font:12px ui-monospace,SFMono-Regular,monospace;color:var(--accent);
+  letter-spacing:.14em;text-transform:uppercase;margin:0 0 10px}
+.case h1{font-size:clamp(28px,4.4vw,42px);margin:0 0 12px}
+.case .meta{margin:0 0 26px;color:var(--faint);font-size:14px}
+.case .hero{width:100%;aspect-ratio:16/9;max-height:270px;background:#0f1014;
+  border:1px solid var(--line);border-radius:var(--radius);margin-bottom:28px}
+.case .metrics{border-top:0;border-bottom:1px solid var(--line);gap:30px;
+  padding:0 0 22px;margin:0 0 28px}
+.case .metric b{font-size:24px}
+.case .metric span{font-size:12px}
+.case section{padding:0 0 22px}
+.case h2{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);
+  margin:0 0 8px}
+.case p.body{margin:0;color:var(--dim);font-size:16px;line-height:1.7}
+.case .nav{display:flex;gap:10px;flex-wrap:wrap;padding-top:14px;border-top:1px solid var(--line)}
+
+@media (max-width:560px){
+  .timeline .when{flex:0 0 100%}
+  .timeline li{gap:6px}
+  .case .metrics{gap:18px}
+  .case .metric b{font-size:19px}
+}
+
+/* Used by the prev/next links on a case study. */
+.mini{display:inline-flex;align-items:center;gap:7px;text-decoration:none;
+  background:var(--card);border:1px solid var(--line);color:var(--dim);
+  padding:8px 15px;border-radius:999px;font-size:13.5px;transition:.15s}
+.mini:hover{color:var(--ink);border-color:#3a434f}

@@ -76,3 +76,10 @@ footer a{color:var(--dim)}
   header{padding:54px 0 34px}
   .grid{grid-template-columns:1fr}
 }
+
+/* A short bio on the project page. The projects are the point here — anyone
+   who wants the career goes to /work/. */
+.bio{margin:26px 0 0;max-width:66ch;color:var(--dim);font-size:15px;
+  padding-left:14px;border-left:2px solid var(--line)}
+.bio b{color:var(--ink);font-weight:600}
+.bio a{color:var(--accent)}
