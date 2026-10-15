@@ -156,6 +156,66 @@ export const CASES = [
       <g stroke="#3a4250" stroke-width=".8"><path d="M118 23 H146"/><path d="M118 43 H140"/><path d="M118 63 H144"/></g>`,
   },
   {
+    id: 'aeom',
+    client: 'AEOM Investment Advisors',
+    role: 'Principal · Registered investment adviser, Series 65',
+    period: '2024 – present',
+    title: 'A quantitative practice, run unattended against live capital',
+    summary: 'A registered advisory firm and the systematic trading system behind it — signal '
+      + 'generation, execution, monitoring and risk sizing, plus a raw land fund run with partners.',
+    why: 'Performance figures are deliberately absent from this page.',
+    whyMore: 'AEOM is a registered investment adviser with outside partner capital, and the SEC '
+      + 'Marketing Rule governs performance claims. What is here is the method, not the results.',
+    metrics: [
+      ['Walk-forward', 'and Monte Carlo backtesting, realistic fills and slippage', ''],
+      ['4 regimes', 'volatility classification conditioning positioning', ''],
+      ['400+ acres', 'rural land fund, four-investor partnership', ''],
+    ],
+    detail: [
+      ['What it is', 'A registered investment adviser (Series 65) that I run as principal '
+        + 'alongside consulting work. It exists partly because a quantitative practice is the '
+        + 'honest way to keep the modelling skills sharp — a backtest that is wrong costs you '
+        + 'personally, which is a different kind of feedback from a backtest that is wrong in a '
+        + 'deck.'],
+      ['The trading system', 'A production system running unattended against live capital: signal '
+        + 'generation, execution, monitoring and risk sizing. Walk-forward and Monte Carlo '
+        + 'backtesting with realistic fills and slippage, a Black-Scholes pricing engine, and a '
+        + 'custom backtester underneath it.'],
+      ['Measuring it properly', 'Sharpe alone hides the shape of a return stream, so the metric '
+        + 'set extends to Sortino and Calmar for asymmetric payoffs, period-consistency testing, '
+        + 'and hard per-window drawdown constraints. Volatility-regime classification '
+        + '(high/low/rising/falling) conditions the positioning rather than being predicted for '
+        + 'its own sake.'],
+      ['Portfolio construction', 'Mean-variance optimization and an efficient-frontier core, '
+        + 'blended with macro and geopolitical scenario forecasts.'],
+      ['The news-sentiment layer', 'Ingests unstructured financial news, extracts entity '
+        + 'sentiment, and produces directional signals and a volatility-regime read. The thesis is '
+        + 'negative and worth stating plainly: news is a <em>poor primary predictor</em> — '
+        + 'backward-looking, highly correlated with price, and much of the corpus written to fill '
+        + 'a content quota. It is a useful <em>conditioning</em> layer. The informative extract is '
+        + 'cross-source variance: dispersion carries information, agreement is already priced.'],
+      ['The land fund', 'Over 400 acres of rural Texas farmland, acquired, lightly developed and '
+        + 'resold. Lead partner in a four-investor partnership, with private-equity consulting work '
+        + 'in progress alongside it.'],
+      ['Why it is on this page', 'Not as a track record — none is claimed or shown. It is here '
+        + 'because it is where the applied-mathematics side of the work stays load-bearing, and '
+        + 'because a registered entity with outside capital is a disclosable outside business '
+        + 'activity. Saying so first is the professional version.'],
+    ],
+    tags: ['systematic trading', 'portfolio optimization', 'NLP', 'regulated', 'options'],
+    svg: `<rect width="160" height="90" fill="#0f1014"/>
+      <rect x="34" y="12" width="30" height="66" fill="#1c1510" opacity=".8"/>
+      <rect x="96" y="12" width="26" height="66" fill="#1c1510" opacity=".8"/>
+      <g fill="#6b5b4c" font-family="ui-monospace,monospace" font-size="5.5">
+        <text x="36" y="20">high vol</text><text x="98" y="20">high vol</text>
+      </g>
+      <path d="M10 56 L22 50 L34 54 L46 34 L58 62 L70 44 L82 40 L94 46 L106 26 L118 58 L130 42 L150 38"
+        fill="none" stroke="#7aa2f7" stroke-width="1.5" stroke-linejoin="round"/>
+      <g stroke="#3a4250" stroke-width=".8"><path d="M10 78 H150"/><path d="M10 12 V78"/></g>
+      <g fill="#5fd3a6"><circle cx="46" cy="34" r="2.6"/><circle cx="106" cy="26" r="2.6"/></g>
+      <g fill="#e2563f"><circle cx="58" cy="62" r="2.6"/><circle cx="118" cy="58" r="2.6"/></g>`,
+  },
+  {
     id: 'amazon',
     client: 'Amazon',
     role: 'Senior Applied Scientist — Fashion Tech & Consumer Electronics Tech',
