@@ -18,8 +18,20 @@ a{color:inherit}
 
 .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
 
+/* ---------- top bar ----------
+   Anyone who came here to hire rather than to play should find the CV without
+   scrolling, so it sits above the headline rather than in the link row. */
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding:20px 0 0}
+.topbar .whoami{font-size:14px;letter-spacing:.02em;color:var(--faint)}
+.topbar .cv{display:inline-flex;align-items:center;gap:7px;text-decoration:none;
+  font-size:14px;font-weight:600;padding:8px 16px;border-radius:999px;
+  color:#06241b;background:var(--accent);border:1px solid var(--accent);
+  transition:.15s}
+.topbar .cv:hover{filter:brightness(1.07);transform:translateY(-1px)}
+
 /* ---------- header ---------- */
-header{padding:90px 0 54px}
+header{padding:62px 0 54px}
 h1{margin:0 0 14px;font-size:clamp(34px,5.5vw,56px);line-height:1.08;letter-spacing:-.02em}
 h1 span{color:var(--accent)}
 .lede{margin:0;max-width:62ch;font-size:clamp(16px,2vw,19px);color:var(--dim)}
@@ -52,6 +64,12 @@ section{padding:30px 0 10px}
 .why{margin:0;color:var(--faint);font-size:13.5px;border-left:2px solid var(--line);
   padding-left:11px}
 .why b{color:var(--accent);font-weight:600}
+/* A deliberately public invite code — the app is invite-only, and a visitor
+   who cannot get in has no way to judge the project. */
+.invite{margin:0;font-size:13px;color:var(--dim)}
+.invite code{font:12px ui-monospace,SFMono-Regular,monospace;color:var(--accent);
+  background:var(--card-2);border:1px solid var(--line);border-radius:5px;
+  padding:2px 7px;letter-spacing:.06em;white-space:nowrap}
 .tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:auto;padding-top:4px}
 .tag{font:11px ui-monospace,SFMono-Regular,monospace;color:var(--faint);
   background:var(--card-2);border:1px solid var(--line);padding:2px 8px;border-radius:5px}
@@ -73,7 +91,7 @@ footer{padding:70px 0 60px;color:var(--faint);font-size:13.5px;
 footer a{color:var(--dim)}
 
 @media (max-width:560px){
-  header{padding:54px 0 34px}
+  header{padding:38px 0 34px}
   .grid{grid-template-columns:1fr}
 }
 

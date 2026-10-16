@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#0c0d0f">
-<title>Theo Van Rooy — things that run in a browser</title>
-<meta name="description" content="Games, instruments and workshop tools that run in a browser tab. No installer, no account, no plugin.">
+<title>Theo Van Rooy — open source, experimental, engineered to ship</title>
+<meta name="description" content="Open source products carried all the way to something people use: deployed applications, browser instruments and games, and engineering software for CNC, CAD and PCB work.">
 <link rel="stylesheet" href="css/style.css?v=2">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='11' fill='none' stroke='%235fd3a6' stroke-width='3'/></svg>">
 </head>
@@ -13,16 +13,22 @@
 
 <div class="wrap">
 
+<nav class="topbar">
+  <span class="whoami">Theodore Van Rooy</span>
+  <a class="cv" href="work/">Work &amp; CV &rarr;</a>
+</nav>
+
 <header>
-  <h1>Things that run in<br><span>a browser tab.</span></h1>
-  <p class="lede">I build the tools for my own hobbies, and then I build them properly.
-    Games, musical instruments, and workshop software for boats, circuit boards and
-    flag football. <b>Everything here opens in a browser</b> — no installer, no account,
-    no plugin, and in most cases no assets to download either, because the sounds and
-    the terrain are generated on the spot.</p>
+  <h1>Open source, experimental,<br><span>engineered to ship.</span></h1>
+  <p class="lede">Everything here is open source, most of it began as an experiment, and all of it
+    is built to be used by someone other than me. Some of it is a browser tab; some is a deployed
+    application with accounts, a database and a release pipeline; some is Python that drives a CNC
+    table or lays out a circuit board. <b>AI is a supercharger for every one of them</b> — but a
+    supercharger is not an engine. No intelligence, however general, has ever been a substitute for
+    specification, measurement and iteration.</p>
   <div class="links">
-    <a href="work/">Work &amp; CV &rarr;</a>
     <a href="https://github.com/greentheo">GitHub</a>
+    <a href="#deployed">Deployed</a>
     <a href="#sound">Sound</a>
     <a href="#play">Games</a>
     <a href="#workshop">Workshop</a>
@@ -30,10 +36,64 @@
 
   <p class="bio">By day I am an applied AI and ML lead &mdash; twenty years of production machine
     learning, the last three building GenAI systems end to end, previously at
-    <b>Amazon</b> and <b>Google</b> and twice a technical founder. Everything below is what I build
-    when nobody is paying me to: the hobbies came first and the software followed. If you are here
-    to hire rather than to play, the <a href="work/">work and CV</a> page is the one you want.</p>
+    <b>Amazon</b> and <b>Google</b> and twice a technical founder. This page is the proving ground:
+    the same discipline, on problems I picked myself and carried all the way to something people
+    use. Nothing here is confined to a browser tab, and neither is the work it stands in for.
+    If you are here to hire, the <a href="work/">work and CV</a> page is the one you want.</p>
 </header>
+
+<section id="deployed">
+  <div class="shead"><h2>Deployed</h2><p>Real applications &mdash; accounts, a database, a release pipeline</p></div>
+  <div class="grid">
+
+    <article class="card">
+      <svg class="thumb" viewBox="0 0 160 90" role="img" aria-label="A retro terminal drilling vocabulary">
+        <rect width="160" height="90" fill="#0d1014"/>
+        <rect x="26" y="12" width="108" height="60" rx="5" fill="#161a20" stroke="#2c323c"/>
+        <path d="M70 72 h20 l5 7 h-30Z" fill="#161a20" stroke="#2c323c"/>
+        <rect x="34" y="19" width="92" height="42" rx="2" fill="#07170f" stroke="#1d3a2c"/>
+        <g stroke="#0e2a1e" stroke-width="1">
+          <path d="M34 25 H126"/><path d="M34 31 H126"/><path d="M34 37 H126"/>
+          <path d="M34 43 H126"/><path d="M34 49 H126"/><path d="M34 57 H126"/>
+        </g>
+        <text x="40" y="33" fill="#5fd3a6" font-family="ui-monospace,monospace" font-size="8.5">la lumière</text>
+        <text x="40" y="44" fill="#2f7d5c" font-family="ui-monospace,monospace" font-size="6.5">the light</text>
+        <g fill="#5fd3a6">
+          <rect x="40" y="51" width="11" height="4" rx="1"/>
+          <rect x="55" y="51" width="11" height="4" rx="1"/>
+          <rect x="70" y="51" width="11" height="4" rx="1"/>
+        </g>
+        <g fill="#1d3a2c">
+          <rect x="85" y="51" width="11" height="4" rx="1"/>
+          <rect x="100" y="51" width="11" height="4" rx="1"/>
+          <rect x="115" y="51" width="11" height="4" rx="1"/>
+        </g>
+        <rect x="118" y="24" width="5" height="7" fill="#e0a152"/>
+      </svg>
+      <div class="body">
+        <div class="title"><h3>Langue</h3><span class="pill live">live</span></div>
+        <p class="what">AI language learning at real CEFR levels &mdash; French, Spanish, Portuguese
+          and Italian, A1 to C2. A Next.js app on Railway with invite-only accounts, and a Python CLI
+          that runs the same vocabulary fully offline against Ollama.</p>
+        <p class="why"><b>The vocabulary is validated, not vibed.</b> Every library is generated from
+          pipe-separated sources and checked in CI &mdash; no duplicate inside a level, no word at two
+          levels, and no library that is quietly another language. A mislabelled German set got caught
+          that way and deleted rather than shipped.</p>
+        <p class="invite">Accounts are invite-only. Register with the shared code
+          <code>DY1K-2JMF-D961</code> &mdash; the button below fills it in for you.</p>
+        <div class="tags"><span class="tag">Next.js 16</span><span class="tag">Postgres</span>
+          <span class="tag">Prisma</span><span class="tag">Claude</span><span class="tag">Ollama</span>
+          <span class="tag">Railway</span><span class="tag">MIT</span></div>
+        <div class="cta">
+          <a class="play" href="https://web-production-c2ade.up.railway.app/register?code=DY1K-2JMF-D961">Create an account</a>
+          <a href="https://web-production-c2ade.up.railway.app/learn">Sign in</a>
+          <a href="https://github.com/greentheo/langue">Source</a>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
 
 <section id="sound">
   <div class="shead"><h2>Sound</h2><p>Web Audio, down to the circuit</p></div>
