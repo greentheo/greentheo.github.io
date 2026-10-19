@@ -34,6 +34,7 @@ a{color:inherit}
 header{padding:62px 0 54px}
 h1{margin:0 0 14px;font-size:clamp(34px,5.5vw,56px);line-height:1.08;letter-spacing:-.02em}
 h1 span{color:var(--accent)}
+header .role{margin:0 0 16px;color:var(--accent);font-size:15px;letter-spacing:.01em}
 .lede{margin:0;max-width:62ch;font-size:clamp(16px,2vw,19px);color:var(--dim)}
 .lede b{color:var(--ink);font-weight:600}
 .links{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
@@ -95,8 +96,8 @@ footer a{color:var(--dim)}
   .grid{grid-template-columns:1fr}
 }
 
-/* A short bio on the project page. The projects are the point here — anyone
-   who wants the career goes to /work/. */
+/* The second paragraph of the header: what this page is, after the bio that
+   opens it. Anyone who wants the full career goes to /work/. */
 .bio{margin:26px 0 0;max-width:66ch;color:var(--dim);font-size:15px;
   padding-left:14px;border-left:2px solid var(--line)}
 .bio b{color:var(--ink);font-weight:600}
