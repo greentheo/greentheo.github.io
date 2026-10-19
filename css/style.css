@@ -23,7 +23,7 @@ a{color:inherit}
    scrolling, so it sits above the headline rather than in the link row. */
 .topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;
   padding:20px 0 0}
-.topbar .whoami{font-size:14px;letter-spacing:.02em;color:var(--faint)}
+.topbar .whoami{font-size:17px;font-weight:600;letter-spacing:-.01em;color:var(--ink)}
 .topbar .cv{display:inline-flex;align-items:center;gap:7px;text-decoration:none;
   font-size:14px;font-weight:600;padding:8px 16px;border-radius:999px;
   color:#06241b;background:var(--accent);border:1px solid var(--accent);
@@ -97,8 +97,8 @@ footer a{color:var(--dim)}
 }
 
 /* The second paragraph of the header: what this page is, after the bio that
-   opens it. Anyone who wants the full career goes to /work/. */
-.bio{margin:26px 0 0;max-width:66ch;color:var(--dim);font-size:15px;
-  padding-left:14px;border-left:2px solid var(--line)}
+   opens it. Plain body text, a step down from the lede but not a pull quote.
+   Anyone who wants the full career goes to /work/. */
+.bio{margin:20px 0 0;max-width:62ch;color:var(--dim);font-size:clamp(15px,1.8vw,17px)}
 .bio b{color:var(--ink);font-weight:600}
 .bio a{color:var(--accent)}
