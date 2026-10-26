@@ -337,6 +337,45 @@
         <div class="cta"><a href="https://github.com/greentheo">Private repo</a></div>
       </div>
     </article>
+    <article class="card">
+      <svg class="thumb" viewBox="0 0 160 90" role="img" aria-label="A loaded bracket evolving into a truss">
+        <rect width="160" height="90" fill="#0f1014"/>
+        <rect x="12" y="22" width="136" height="48" fill="none" stroke="#2c323c" stroke-dasharray="3 3"/>
+        <g fill="none" stroke="#5fd3a6" stroke-width=".8" opacity=".26">
+          <path d="M18 68 V54 Q30 30 52 30 H108 Q130 30 142 54 V68 H128 V56 Q120 44 104 44 H56 Q40 44 32 56 V68 Z"/>
+          <path d="M18 68 V58 Q36 38 58 38 H102 Q124 38 142 58 V68 H124 V60 Q112 50 100 50 H60 Q48 50 36 60 V68 Z"/>
+        </g>
+        <path d="M18 68 V56 Q32 34 54 34 H106 Q128 34 142 56 V68 H126 V58 Q116 46 102 46 H58 Q44 46 34 58 V68 Z"
+          fill="#17241f" stroke="#5fd3a6" stroke-width="1.2" stroke-linejoin="round"/>
+        <g stroke="#e0a152" stroke-width="1.5" stroke-linecap="round">
+          <path d="M80 10 V28"/><path d="M74 22 L80 29 L86 22"/>
+        </g>
+        <g fill="#7aa2f7">
+          <rect x="14" y="68" width="26" height="3" rx="1"/><rect x="120" y="68" width="26" height="3" rx="1"/>
+        </g>
+        <g stroke="#7aa2f7" stroke-width=".9" stroke-linecap="round" opacity=".8">
+          <path d="M17 72 l-3 5"/><path d="M24 72 l-3 5"/><path d="M31 72 l-3 5"/><path d="M38 72 l-3 5"/>
+          <path d="M123 72 l-3 5"/><path d="M130 72 l-3 5"/><path d="M137 72 l-3 5"/><path d="M144 72 l-3 5"/>
+        </g>
+        <path d="M106 14 l7 3 6 -1 7 2 6 1 8 2" fill="none" stroke="#e2563f" stroke-width="1"
+          stroke-linejoin="round" stroke-linecap="round" opacity=".8"/>
+      </svg>
+      <div class="body">
+        <div class="title"><h3>Whittle</h3><span class="pill wip">in progress</span></div>
+        <p class="what">Evolutionary optimization of 3D parts. Give it a design box, anchors and
+          a material budget; it searches for the shape that does the job with less material and
+          writes OBJ and STL.</p>
+        <p class="why"><b>One optimizer, two kinds of change.</b> A density field can open a hole
+          the part never had; a deformation lattice can only move the surface, and keeps it
+          watertight. Strength needs the first, aerodynamics the second, and both sit behind one
+          interface. Scaffolded, and candid about it &mdash; the structural objective raises
+          rather than return a number it cannot yet compute.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">NumPy</span>
+          <span class="tag">topology optimization</span><span class="tag">evolutionary</span></div>
+        <div class="cta"><a href="https://github.com/greentheo/whittle">Source</a>
+          <a href="https://github.com/greentheo/whittle/blob/main/ROADMAP.md">Roadmap</a></div>
+      </div>
+    </article>
 
   </div>
 </section>
@@ -530,6 +569,48 @@
         <div class="cta">
           <a class="play" href="https://greentheo.github.io/flagbook/">Open it</a>
           <a href="https://github.com/greentheo/flagbook">Source</a>
+        </div>
+      </div>
+    </article>
+    <article class="card">
+      <svg class="thumb" viewBox="0 0 160 90" role="img" aria-label="A planting calendar of seed, grow and harvest bars">
+        <rect width="160" height="90" fill="#0f1014"/>
+        <g stroke="#232830" stroke-width=".7">
+          <path d="M40 14 V82"/><path d="M70 14 V82"/><path d="M100 14 V82"/><path d="M130 14 V82"/>
+        </g>
+        <g fill="#616b7c" font-family="ui-monospace,monospace" font-size="6">
+          <text x="10" y="10">wk</text><text x="34" y="10">10</text><text x="64" y="10">20</text>
+          <text x="94" y="10">30</text><text x="124" y="10">40</text>
+        </g>
+        <g stroke-width="5">
+          <path d="M14 21 H24" stroke="#7aa2f7"/><path d="M24 21 H62" stroke="#2f6b52"/>
+          <path d="M62 21 H88" stroke="#e0a152"/>
+          <path d="M20 32 H30" stroke="#7aa2f7"/><path d="M30 32 H70" stroke="#2f6b52"/>
+          <path d="M70 32 H96" stroke="#e0a152"/>
+          <path d="M30 43 H40" stroke="#7aa2f7"/><path d="M40 43 H84" stroke="#2f6b52"/>
+          <path d="M84 43 H110" stroke="#e0a152"/>
+          <path d="M42 54 H52" stroke="#7aa2f7"/><path d="M52 54 H92" stroke="#2f6b52"/>
+          <path d="M92 54 H120" stroke="#e0a152"/>
+          <path d="M54 65 H64" stroke="#7aa2f7"/><path d="M64 65 H104" stroke="#2f6b52"/>
+          <path d="M104 65 H132" stroke="#e0a152"/>
+          <path d="M66 76 H76" stroke="#7aa2f7"/><path d="M76 76 H112" stroke="#2f6b52"/>
+          <path d="M112 76 H146" stroke="#e0a152"/>
+        </g>
+      </svg>
+      <div class="body">
+        <div class="title"><h3>Garden Planner</h3><span class="pill live">live</span></div>
+        <p class="what">Pick a USDA zone, a household size and the kind of food you want to grow;
+          get a 52-week calendar &mdash; how many of each crop, when to seed, transplant and
+          harvest, and how much ground it takes.</p>
+        <p class="why"><b>It plans backwards from the plate.</b> The household&rsquo;s calorie
+          target sets the plant counts rather than a guess at row feet, and the schedule only
+          uses a greenhouse if you say you have one. Fifty crops, succession planting, and every
+          plant linked to a supplier you can actually order seed from.</p>
+        <div class="tags"><span class="tag">JavaScript</span><span class="tag">no build step</span>
+          <span class="tag">USDA zones</span></div>
+        <div class="cta">
+          <a class="play" href="https://greentheo.github.io/garden_planner/">Open it</a>
+          <a href="https://github.com/greentheo/garden_planner">Source</a>
         </div>
       </div>
     </article>
