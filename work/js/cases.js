@@ -157,9 +157,9 @@ export const CASES = [
   },
   {
     id: 'aeom',
-    client: 'AEOM Investment Advisors',
+    client: 'AEOM Investments, LLC',
     role: 'Principal · Registered investment adviser, Series 65',
-    period: '2024 – present',
+    period: '2025 – present',
     title: 'A quantitative practice, run unattended against live capital',
     summary: 'A registered advisory firm and the systematic trading system behind it — signal '
       + 'generation, execution, monitoring and risk sizing, plus a raw land fund run with partners.',
