@@ -162,14 +162,14 @@ export const CASES = [
     period: '2025 – present',
     title: 'A quantitative practice, run unattended against live capital',
     summary: 'A registered advisory firm and the systematic trading system behind it — signal '
-      + 'generation, execution, monitoring and risk sizing, plus a raw land fund run with partners.',
+      + 'generation, execution, monitoring and risk sizing.',
     why: 'Performance figures are deliberately absent from this page.',
-    whyMore: 'AEOM is a registered investment adviser with outside partner capital, and the SEC '
-      + 'Marketing Rule governs performance claims. What is here is the method, not the results.',
+    whyMore: 'AEOM is a registered investment adviser, and the SEC Marketing Rule governs '
+      + 'performance claims. What is here is the method, not the results.',
     metrics: [
       ['Walk-forward', 'and Monte Carlo backtesting, realistic fills and slippage', ''],
       ['4 regimes', 'volatility classification conditioning positioning', ''],
-      ['400+ acres', 'rural land fund, four-investor partnership', ''],
+      ['0 disclosures', 'clean regulatory record, checkable on IAPD', ''],
     ],
     detail: [
       ['What it is', 'A registered investment adviser (Series 65) that I run as principal '
@@ -207,13 +207,11 @@ export const CASES = [
         + 'backward-looking, highly correlated with price, and much of the corpus written to fill '
         + 'a content quota. It is a useful <em>conditioning</em> layer. The informative extract is '
         + 'cross-source variance: dispersion carries information, agreement is already priced.'],
-      ['The land fund', 'Over 400 acres of rural Texas farmland, acquired, lightly developed and '
-        + 'resold. Lead partner in a four-investor partnership, with private-equity consulting work '
-        + 'in progress alongside it.'],
       ['Why it is on this page', 'Not as a track record — none is claimed or shown. It is here '
         + 'because it is where the applied-mathematics side of the work stays load-bearing, and '
-        + 'because a registered entity with outside capital is a disclosable outside business '
-        + 'activity. Saying so first is the professional version.'],
+        + 'because a registered entity is a disclosable outside business activity \u2014 as is '
+        + '<a href="case.html?id=vrre">the land business</a>, which is a separate entity and '
+        + 'discloses on its own terms. Saying so first is the professional version.'],
     ],
     tags: ['systematic trading', 'portfolio optimization', 'NLP', 'regulated', 'options'],
     svg: `<rect width="160" height="90" fill="#0f1014"/>
@@ -227,6 +225,66 @@ export const CASES = [
       <g stroke="#3a4250" stroke-width=".8"><path d="M10 78 H150"/><path d="M10 12 V78"/></g>
       <g fill="#5fd3a6"><circle cx="46" cy="34" r="2.6"/><circle cx="106" cy="26" r="2.6"/></g>
       <g fill="#e2563f"><circle cx="58" cy="62" r="2.6"/><circle cx="118" cy="58" r="2.6"/></g>`,
+  },
+  {
+    id: 'vrre',
+    client: 'VRRE',
+    role: 'Principal and operator \u00b7 Rural land partnerships, several LLCs',
+    period: '2021 \u2013 present',
+    title: 'A land business running on two systems I wrote',
+    summary: 'Rural Texas farmland acquired, lightly developed and resold across several '
+      + 'partnership LLCs \u2014 with the sourcing pipeline and the investor-management platform '
+      + 'both built in-house.',
+    why: 'Operator and builder are the same person here.',
+    whyMore: 'Real outside capital, a real multi-entity structure, and two production systems the '
+      + 'business actually runs on. Nothing about it is delegated.',
+    metrics: [
+      ['400+ acres', 'rural Texas farmland acquired, developed, resold', ''],
+      ['6 investors', 'across several partnership LLCs', ''],
+      ['2 systems', 'sourcing and investor management, both live', ''],
+    ],
+    detail: [
+      ['What it is', 'A land business, started in 2021 and the older of my two own ventures by '
+        + 'three and a half years. Several LLCs with different investors in each: rural Texas '
+        + 'farmland acquired, lightly developed and resold, with private-equity consulting work in '
+        + 'progress alongside it.'],
+      ['Not the same entity as the advisory firm', 'VRRE and <a href="case.html?id=aeom">AEOM '
+        + 'Investments, LLC</a> are separate businesses with separate books, separate investors and '
+        + 'different regulators \u2014 one is land, the other is a registered investment adviser. '
+        + 'They are listed separately here for the same reason a compliance form asks about each by '
+        + 'name: a page that merges them is a page you cannot check.'],
+      ['Sourcing the deals', 'A pipeline that scrapes rural land listings and enriches each one '
+        + 'with property polygons and USGS aerial imagery, then runs a visual analysis per parcel '
+        + 'and screens on floodplain and road-cutting constraints before anything reaches the buy '
+        + 'screen. The constraints are the point: most of the work in land is rejecting parcels '
+        + 'cheaply.'],
+      ['Running the partnerships', 'A deal-flow and investor-management platform: a dossier per '
+        + 'deal with the underwriting frozen as it stood at promotion, and investor records '
+        + 'covering LLCs, equity, capital contributions, distributions, loans and per-investor '
+        + 'return \u2014 behind five roles with server-side access scoping.'],
+      ['What is not here', 'No returns. The deals have results and they are not published on this '
+        + 'page \u2014 I hold a Series 65 through the advisory firm, and performance claims from '
+        + 'someone in that position belong in documents written for the purpose, not on a '
+        + 'portfolio.'],
+    ],
+    tags: ['geospatial', 'real assets', 'multi-entity', 'operator', 'LLM vision'],
+    svg: `<rect width="160" height="90" fill="#0f1014"/>
+      <path d="M0 70 Q26 62 46 68 T90 66 Q118 64 160 72 L160 90 L0 90Z" fill="#17283a" opacity=".9"/>
+      <path d="M0 70 Q26 62 46 68 T90 66 Q118 64 160 72" fill="none" stroke="#2f4e68" stroke-width="1"/>
+      <g fill="none" stroke="#3a4250" stroke-width="1">
+        <path d="M14 13 L57 10 L60 39 L17 43Z"/>
+        <path d="M107 13 L146 17 L143 45 L106 41Z"/>
+        <path d="M17 47 L59 43 L62 63 L20 67Z"/>
+        <path d="M106 46 L142 49 L140 70 L105 67Z"/>
+      </g>
+      <path d="M63 10 L103 12 L103 41 L65 39Z" fill="#5fd3a6" opacity=".16"/>
+      <path d="M63 10 L103 12 L103 41 L65 39Z" fill="none" stroke="#5fd3a6" stroke-width="1.7"/>
+      <circle cx="83" cy="25" r="2.4" fill="#5fd3a6"/>
+      <path d="M4 32 L62 28 L105 32 L156 26" fill="none" stroke="#e0a152"
+        stroke-width="1.3" stroke-dasharray="5 3"/>
+      <g stroke="#e2563f" stroke-width="1.4" stroke-linecap="round">
+        <path d="M116 53 L130 65"/><path d="M130 53 L116 65"/>
+      </g>`,
   },
   {
     id: 'amazon',
