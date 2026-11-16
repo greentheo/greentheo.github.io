@@ -333,7 +333,7 @@ export const CASES = [
     id: 'cvr',
     client: 'CVR Energy',
     role: 'Data Scientist — via Royalty Analytics',
-    period: '2008 – 2014',
+    period: '2008 – 2015',
     title: '$90M out of 40,000 square miles',
     summary: 'Geospatial fleet and logistics optimization across hundreds of vehicles, with '
       + 'forecasting to pre-schedule pickups and prospective well-return data steering the routes.',
